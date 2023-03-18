@@ -1,0 +1,1789 @@
+Starting load with 30000 clients
+Starting  clients for ever
+[2023-03-18 01:38:25,006] load-97459bd7c-qn2jq/INFO/locust.main: No run time limit set, use CTRL+C to interrupt.
+[2023-03-18 01:38:25,006] load-97459bd7c-qn2jq/INFO/locust.main: Starting Locust 2.1.0
+[2023-03-18 01:38:25,007] load-97459bd7c-qn2jq/INFO/root: Terminal was not a tty. Keyboard input disabled
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                             0     0(0.00%)  |       0       0       0       0  |    0.00    0.00
+
+[2023-03-18 01:38:25,007] load-97459bd7c-qn2jq/INFO/locust.runners: Ramping to 30000 users at a rate of 1.00 per second
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ POST //api/user/login                                                                  2   2(100.00%)  |     108       3     213       4  |    0.00    0.00
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                             2   2(100.00%)  |     108       3     213       4  |    0.00    0.00
+
+[2023-03-18 01:38:27,061] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                 1     0(0.00%)  |      30      30      30      30  |    0.00    0.00
+ POST //api/user/login                                                                  3   3(100.00%)  |      73       3     213       4  |    1.00    1.00
+ GET //api/user/uniqueid                                                                1   1(100.00%)  |      14      14      14      14  |    0.00    0.00
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                             5    4(80.00%)  |      53       3     213      15  |    1.00    1.00
+
+[2023-03-18 01:38:30,740] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                 2     0(0.00%)  |      23      16      30      17  |    0.33    0.00
+ POST //api/user/login                                                                  6   6(100.00%)  |      46       3     213       4  |    0.67    0.67
+ GET //api/user/uniqueid                                                                2   2(100.00%)  |       8       2      14       3  |    0.33    0.33
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                            10    8(80.00%)  |      34       2     213      11  |    1.33    1.00
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                 2     0(0.00%)  |      23      16      30      17  |    0.20    0.00
+ POST //api/user/login                                                                  8   8(100.00%)  |      36       3     213       4  |    0.80    0.80
+ GET //api/user/uniqueid                                                                2   2(100.00%)  |       8       2      14       3  |    0.20    0.20
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                            12   10(83.33%)  |      29       2     213       5  |    1.20    1.00
+
+[2023-03-18 01:38:34,047] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                 3     0(0.00%)  |      16       3      30      17  |    0.29    0.00
+ POST //api/user/login                                                                  9   9(100.00%)  |      34       3     213       5  |    0.86    0.86
+ GET //api/user/uniqueid                                                                3   3(100.00%)  |       9       2      14      13  |    0.29    0.29
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                            15   12(80.00%)  |      26       2     213      11  |    1.43    1.14
+
+[2023-03-18 01:38:36,931] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                 4     0(0.00%)  |      13       2      30       4  |    0.22    0.00
+ POST //api/user/login                                                                 11  11(100.00%)  |      29       3     213       5  |    1.00    1.00
+ GET //api/user/uniqueid                                                                4   4(100.00%)  |       8       2      14       3  |    0.22    0.22
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                            19   15(78.95%)  |      21       2     213       5  |    1.44    1.22
+
+[2023-03-18 01:38:37,057] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                 5     0(0.00%)  |      11       2      30       4  |    0.30    0.00
+ POST //api/user/login                                                                 12  12(100.00%)  |      27       3     213       4  |    0.90    0.90
+ GET //api/user/uniqueid                                                                5   5(100.00%)  |      10       2      19      13  |    0.30    0.30
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                            22   17(77.27%)  |      19       2     213       4  |    1.50    1.20
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                 7     0(0.00%)  |       9       2      30       4  |    0.40    0.00
+ POST //api/user/login                                                                 16  16(100.00%)  |      24       3     213       4  |    1.00    1.00
+ GET //api/user/uniqueid                                                                5   5(100.00%)  |      10       2      19      13  |    0.40    0.40
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                            28   21(75.00%)  |      17       2     213       4  |    1.80    1.40
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                 7     0(0.00%)  |       9       2      30       4  |    0.40    0.00
+ POST //api/user/login                                                                 18  18(100.00%)  |      22       3     213       4  |    1.10    1.10
+ GET //api/user/uniqueid                                                                5   5(100.00%)  |      10       2      19      13  |    0.40    0.40
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                            30   23(76.67%)  |      17       2     213       4  |    1.90    1.50
+
+[2023-03-18 01:38:44,075] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                 8     0(0.00%)  |       8       2      30       3  |    0.50    0.00
+ POST //api/user/login                                                                 18  18(100.00%)  |      22       3     213       4  |    1.10    1.10
+ GET //api/user/uniqueid                                                                6   6(100.00%)  |       9       2      19       3  |    0.30    0.30
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                            32   24(75.00%)  |      16       2     213       4  |    1.90    1.40
+
+[2023-03-18 01:38:46,223] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                12     0(0.00%)  |       6       2      30       3  |    0.50    0.00
+ POST //api/user/login                                                                 20  20(100.00%)  |      21       3     213       4  |    0.90    0.90
+ GET //api/user/uniqueid                                                                7   7(100.00%)  |       9       2      19      13  |    0.30    0.30
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                            39   27(69.23%)  |      14       2     213       4  |    1.70    1.20
+
+[2023-03-18 01:38:47,675] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                16     0(0.00%)  |       6       2      30       3  |    0.60    0.00
+ POST //api/user/login                                                                 21  21(100.00%)  |     361       3    7161       5  |    1.00    1.00
+ GET //api/user/uniqueid                                                                8   8(100.00%)  |     134       2    1004      13  |    0.30    0.30
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                            45   29(64.44%)  |     194       2    7161       4  |    1.90    1.30
+
+[2023-03-18 01:38:50,226] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                19     0(0.00%)  |       6       2      30       3  |    0.90    0.00
+ POST //api/user/login                                                                 22  22(100.00%)  |     671       3    7178       5  |    0.80    0.80
+ GET //api/user/uniqueid                                                                9   9(100.00%)  |     459       2    3065      15  |    0.30    0.30
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                            50   31(62.00%)  |     380       2    7178       4  |    2.00    1.10
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                21     0(0.00%)  |       5       2      30       3  |    1.20    0.00
+ POST //api/user/login                                                                 24  24(100.00%)  |     615       3    7178       4  |    0.70    0.70
+ GET //api/user/uniqueid                                                                9   9(100.00%)  |     459       2    3065      15  |    0.30    0.30
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                            54   33(61.11%)  |     352       2    7178       4  |    2.20    1.00
+
+[2023-03-18 01:38:54,367] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                23     0(0.00%)  |       6       2      30       3  |    1.30    0.00
+ POST //api/user/login                                                                 25  25(100.00%)  |     881       3    7259       5  |    0.60    0.60
+ GET //api/user/uniqueid                                                               10  10(100.00%)  |    1140       2    7265      15  |    0.40    0.40
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                            58   35(60.34%)  |     578       2    7265       4  |    2.30    1.00
+
+[2023-03-18 01:38:56,475] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                26     0(0.00%)  |       8       2      67       3  |    1.50    0.00
+ POST //api/user/login                                                                 26  26(100.00%)  |     964       3    7259       5  |    0.70    0.70
+ GET //api/user/uniqueid                                                               11  11(100.00%)  |    1128       2    7265      15  |    0.40    0.40
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                            63   37(58.73%)  |     598       2    7265       4  |    2.60    1.10
+
+[2023-03-18 01:38:57,691] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                27     0(0.00%)  |       8       2      67       3  |    1.60    0.00
+ POST //api/user/login                                                                 27  27(100.00%)  |     967       3    7259       5  |    0.60    0.60
+ GET //api/user/uniqueid                                                               12  12(100.00%)  |    1635       2    7265      15  |    0.40    0.40
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                            66   39(59.09%)  |     696       2    7265       4  |    2.60    1.00
+
+[2023-03-18 01:38:59,227] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                29     0(0.00%)  |      10       2      67       4  |    1.20    0.00
+ POST //api/user/login                                                                 28  28(100.00%)  |    1041       3    7259       5  |    0.60    0.60
+ GET //api/user/uniqueid                                                               13  13(100.00%)  |    2058       2    7265      19  |    0.40    0.40
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                            70   41(58.57%)  |     803       2    7265       4  |    2.20    1.00
+
+[2023-03-18 01:39:02,299] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                30     0(0.00%)  |      10       2      67       4  |    1.10    0.00
+ POST //api/user/login                                                                 29  29(100.00%)  |    1253       3    7259       8  |    0.50    0.50
+ GET //api/user/uniqueid                                                               14  14(100.00%)  |    3013       2   15425      19  |    0.50    0.50
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                            73   43(58.90%)  |    1080       2   15425       4  |    2.10    1.00
+
+[2023-03-18 01:39:03,323] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+[2023-03-18 01:39:04,297] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                33     0(0.00%)  |      10       2      67       4  |    0.90    0.00
+ POST //api/user/login                                                                 29  29(100.00%)  |    1253       3    7259       8  |    0.50    0.50
+ GET //api/user/uniqueid                                                               16  16(100.00%)  |    3087       2   15425      19  |    0.50    0.50
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                            78   45(57.69%)  |    1103       2   15425       4  |    1.90    1.00
+
+[2023-03-18 01:39:06,397] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                35     0(0.00%)  |       9       2      67       4  |    0.80    0.00
+ POST //api/user/login                                                                 30  30(100.00%)  |    1211       3    7259       6  |    0.40    0.40
+ GET //api/user/uniqueid                                                               17  17(100.00%)  |    3333       2   15425    1000  |    0.60    0.60
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                            82   47(57.32%)  |    1138       2   15425       4  |    1.80    1.00
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                35     0(0.00%)  |       9       2      67       4  |    0.90    0.00
+ POST //api/user/login                                                                 32  32(100.00%)  |    1365       3    7336       6  |    0.40    0.40
+ GET //api/user/uniqueid                                                               17  17(100.00%)  |    3333       2   15425    1000  |    0.60    0.60
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                            84   49(58.33%)  |    1198       2   15425       4  |    1.90    1.00
+
+[2023-03-18 01:39:09,504] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                40     0(0.00%)  |      11       2      67       4  |    0.90    0.00
+ POST //api/user/login                                                                 33  33(100.00%)  |    1792       3   15474       8  |    0.50    0.50
+ GET //api/user/uniqueid                                                               18  18(100.00%)  |    3148       2   15425      19  |    0.50    0.50
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                            91   51(56.04%)  |    1278       2   15474       5  |    1.90    1.00
+
+[2023-03-18 01:39:11,272] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+[2023-03-18 01:39:12,227] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                42     0(0.00%)  |      11       2      67       4  |    1.00    0.00
+ POST //api/user/login                                                                 33  33(100.00%)  |    1792       3   15474       8  |    0.50    0.50
+ GET //api/user/uniqueid                                                               20  20(100.00%)  |    3761       2   15477    1000  |    0.50    0.50
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                            95   53(55.79%)  |    1419       2   15477       5  |    2.00    1.00
+
+[2023-03-18 01:39:14,907] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                44     0(0.00%)  |      10       2      67       4  |    1.20    0.00
+ POST //api/user/login                                                                 34  34(100.00%)  |    1740       3   15474       6  |    0.40    0.40
+ GET //api/user/uniqueid                                                               21  21(100.00%)  |    3727       2   15477    1000  |    0.60    0.60
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                            99   55(55.56%)  |    1393       2   15477       4  |    2.20    1.00
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                46     0(0.00%)  |      10       2      67       4  |    1.20    0.00
+ POST //api/user/login                                                                 36  36(100.00%)  |    1872       3   15474       8  |    0.50    0.50
+ GET //api/user/uniqueid                                                               21  21(100.00%)  |    3727       2   15477    1000  |    0.50    0.50
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           103   57(55.34%)  |    1419       2   15477       4  |    2.20    1.00
+
+[2023-03-18 01:39:17,411] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                50     0(0.00%)  |      10       2      67       4  |    1.10    0.00
+ POST //api/user/login                                                                 37  37(100.00%)  |    2019       3   15474      11  |    0.50    0.50
+ GET //api/user/uniqueid                                                               22  22(100.00%)  |    4253       2   15477    1000  |    0.50    0.50
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           109   59(54.13%)  |    1548       2   15477       4  |    2.10    1.00
+
+[2023-03-18 01:39:19,451] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+[2023-03-18 01:39:20,259] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                52     0(0.00%)  |       9       2      67       4  |    1.20    0.00
+ POST //api/user/login                                                                 37  37(100.00%)  |    2019       3   15474      11  |    0.50    0.50
+ GET //api/user/uniqueid                                                               24  24(100.00%)  |    5508       2   31490    3000  |    0.50    0.50
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           113   61(53.98%)  |    1835       2   31490       4  |    2.20    1.00
+
+[2023-03-18 01:39:21,252] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+[2023-03-18 01:39:22,276] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                55     0(0.00%)  |       9       2      67       4  |    1.20    0.00
+ POST //api/user/login                                                                 37  37(100.00%)  |    2019       3   15474      11  |    0.50    0.50
+ GET //api/user/uniqueid                                                               26  26(100.00%)  |    5631       2   31490    3100  |    0.50    0.50
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           118   63(53.39%)  |    1878       2   31490       4  |    2.20    1.00
+
+[2023-03-18 01:39:23,291] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+[2023-03-18 01:39:24,219] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                61     0(0.00%)  |       9       2      67       4  |    1.30    0.00
+ POST //api/user/login                                                                 37  37(100.00%)  |    2019       3   15474      11  |    0.40    0.40
+ GET //api/user/uniqueid                                                               28  28(100.00%)  |    5520       2   31490    3100  |    0.60    0.60
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           126   65(51.59%)  |    1824       2   31490       5  |    2.30    1.00
+
+[2023-03-18 01:39:25,301] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+[2023-03-18 01:39:26,363] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                63     0(0.00%)  |      10       2      67       4  |    1.60    0.00
+ POST //api/user/login                                                                 37  37(100.00%)  |    2019       3   15474      11  |    0.30    0.30
+ GET //api/user/uniqueid                                                               30  30(100.00%)  |    5700       2   31490    3100  |    0.70    0.70
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           130   67(51.54%)  |    1895       2   31490       5  |    2.60    1.00
+
+[2023-03-18 01:39:27,387] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+[2023-03-18 01:39:28,402] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                66     0(0.00%)  |      10       2      70       4  |    1.70    0.00
+ POST //api/user/login                                                                 37  37(100.00%)  |    2019       3   15474      11  |    0.10    0.10
+ GET //api/user/uniqueid                                                               32  32(100.00%)  |    5570       2   31490    3100  |    0.90    0.90
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           135   69(51.11%)  |    1879       2   31490       8  |    2.70    1.00
+
+[2023-03-18 01:39:29,220] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+[2023-03-18 01:39:30,483] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                66     0(0.00%)  |      10       2      70       4  |    1.60    0.00
+ POST //api/user/login                                                                 37  37(100.00%)  |    2019       3   15474      11  |    0.10    0.10
+ GET //api/user/uniqueid                                                               34  34(100.00%)  |    5547       2   31490    3100  |    0.90    0.90
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           137   71(51.82%)  |    1927       2   31490      10  |    2.60    1.00
+
+[2023-03-18 01:39:31,227] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+[2023-03-18 01:39:32,251] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                67     0(0.00%)  |      10       2      70       4  |    1.60    0.00
+ POST //api/user/login                                                                 37  37(100.00%)  |    2019       3   15474      11  |    0.00    0.00
+ GET //api/user/uniqueid                                                               36  36(100.00%)  |    5632       2   31490    3100  |    1.00    1.00
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           140   73(52.14%)  |    1987       2   31490      11  |    2.60    1.00
+
+[2023-03-18 01:39:33,544] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                67     0(0.00%)  |      10       2      70       4  |    1.20    0.00
+ POST //api/user/login                                                                 38  38(100.00%)  |    2793       3   31445      11  |    0.00    0.00
+ GET //api/user/uniqueid                                                               37  37(100.00%)  |    5899       2   31490    7100  |    1.00    1.00
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           142   75(52.82%)  |    2289       2   31490      12  |    2.20    1.00
+
+[2023-03-18 01:39:35,231] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                70     0(0.00%)  |      10       2      70       4  |    0.90    0.00
+ POST //api/user/login                                                                 39  39(100.00%)  |    2906       3   31445      12  |    0.00    0.00
+ GET //api/user/uniqueid                                                               38  38(100.00%)  |    5824       2   31490    3100  |    1.00    1.00
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           147   77(52.38%)  |    2281       2   31490      12  |    1.90    1.00
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                72     0(0.00%)  |      10       2      70       4  |    0.70    0.00
+ POST //api/user/login                                                                 41  41(100.00%)  |    2940       3   31445      12  |    0.10    0.10
+ GET //api/user/uniqueid                                                               38  38(100.00%)  |    5824       2   31490    3100  |    0.90    0.90
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           151   79(52.32%)  |    2269       2   31490      12  |    1.70    1.00
+
+[2023-03-18 01:39:39,227] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+[2023-03-18 01:39:40,032] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+[2023-03-18 01:39:40,052] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+[2023-03-18 01:39:40,223] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                73     0(0.00%)  |      10       2      70       4  |    0.80    0.00
+ POST //api/user/login                                                                 41  41(100.00%)  |    2940       3   31445      12  |    0.30    0.30
+ GET //api/user/uniqueid                                                               42  42(100.00%)  |    8271       2   60002    3100  |    0.70    0.70
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           156   83(53.21%)  |    3004       2   60002      12  |    1.80    1.00
+
+[2023-03-18 01:39:41,467] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+[2023-03-18 01:39:41,468] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                73     0(0.00%)  |      10       2      70       4  |    0.70    0.00
+ POST //api/user/login                                                                 42  42(100.00%)  |    2942       3   31445      12  |    0.40    0.40
+ GET //api/user/uniqueid                                                               44  44(100.00%)  |    9324       2   60002    7100  |    0.60    0.60
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           159   86(54.09%)  |    3362       2   60002      12  |    1.70    1.00
+
+[2023-03-18 01:39:44,235] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                74     0(0.00%)  |      10       2      70       4  |    0.70    0.00
+ POST //api/user/login                                                                 43  43(100.00%)  |    2945       3   31445      18  |    0.40    0.40
+ GET //api/user/uniqueid                                                               45  45(100.00%)  |    9141       2   60002    7100  |    0.90    0.90
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           162   88(54.32%)  |    3325       2   60002      12  |    2.00    1.30
+
+[2023-03-18 01:39:45,938] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                74     0(0.00%)  |      10       2      70       4  |    0.70    0.00
+ POST //api/user/login                                                                 47  47(100.00%)  |    5469       3   60029      45  |    0.60    0.60
+ GET //api/user/uniqueid                                                               46  46(100.00%)  |   10246       2   60002    7100  |    0.70    0.70
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           167   93(55.69%)  |    4366       2   60029      12  |    2.00    1.30
+
+[2023-03-18 01:39:48,049] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                76     0(0.00%)  |      10       2      70       4  |    0.50    0.00
+ POST //api/user/login                                                                 50  50(100.00%)  |    6991       3   60029      53  |    0.60    0.60
+ GET //api/user/uniqueid                                                               47  47(100.00%)  |   11305       2   60022    7100  |    0.80    0.80
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           173   97(56.07%)  |    5096       2   60029      14  |    1.90    1.40
+
+[2023-03-18 01:39:49,231] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+[2023-03-18 01:39:49,668] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+[2023-03-18 01:39:50,095] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+[2023-03-18 01:39:50,340] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+[2023-03-18 01:39:51,102] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                79     0(0.00%)  |      11       2      70       4  |    0.40    0.00
+ POST //api/user/login                                                                 50  50(100.00%)  |    6991       3   60029      53  |    0.90    0.90
+ GET //api/user/uniqueid                                                               52  52(100.00%)  |   13700       2   60022    7100  |    0.90    0.90
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           181  102(56.35%)  |    5872       2   60029      15  |    2.20    1.80
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                82     0(0.00%)  |      11       2      70       4  |    0.50    0.00
+ POST //api/user/login                                                                 53  53(100.00%)  |    7920       3   60037    1000  |    0.90    0.90
+ GET //api/user/uniqueid                                                               52  52(100.00%)  |   13700       2   60022    7100  |    1.00    1.00
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           187  105(56.15%)  |    6059       2   60037      15  |    2.40    1.90
+
+[2023-03-18 01:39:53,880] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+[2023-03-18 01:39:54,238] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+[2023-03-18 01:39:54,964] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                90     0(0.00%)  |      10       2      70       4  |    0.90    0.00
+ POST //api/user/login                                                                 55  55(100.00%)  |    8852       3   60037    1000  |    1.10    1.10
+ GET //api/user/uniqueid                                                               55  55(100.00%)  |   15190       2   60022    7100  |    0.80    0.80
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           200  110(55.00%)  |    6616       2   60037      15  |    2.80    1.90
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                93     0(0.00%)  |      10       2      70       4  |    1.50    0.00
+ POST //api/user/login                                                                 58  58(100.00%)  |    9430       3   60037    1000  |    1.10    1.10
+ GET //api/user/uniqueid                                                               55  55(100.00%)  |   15190       2   60022    7100  |    1.00    1.00
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           206  113(54.85%)  |    6715       2   60037      15  |    3.60    2.10
+
+[2023-03-18 01:39:58,755] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                95     0(0.00%)  |      10       2      70       4  |    1.80    0.00
+ POST //api/user/login                                                                 60  60(100.00%)  |    9167       3   60037    1000  |    1.20    1.20
+ GET //api/user/uniqueid                                                               56  56(100.00%)  |   15990       2   60022    7100  |    0.90    0.90
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           211  116(54.98%)  |    6855       2   60037      15  |    3.90    2.10
+
+[2023-03-18 01:39:59,238] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+[2023-03-18 01:40:00,249] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+[2023-03-18 01:40:00,400] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                                98     0(0.00%)  |      10       2      70       4  |    1.90    0.00
+ POST //api/user/login                                                                 61  61(100.00%)  |   10001       3   60057    1000  |    1.10    1.10
+ GET //api/user/uniqueid                                                               59  59(100.00%)  |   16194       2   60022    7100  |    0.90    0.90
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           218  120(55.05%)  |    7186       2   60057      15  |    3.90    2.00
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                               102     0(0.00%)  |      10       2      70       4  |    1.80    0.00
+ POST //api/user/login                                                                 63  63(100.00%)  |    9929       3   60057    1000  |    1.00    1.00
+ GET //api/user/uniqueid                                                               59  59(100.00%)  |   16194       2   60022    7100  |    0.80    0.80
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           224  122(54.46%)  |    7062       2   60057      13  |    3.60    1.80
+
+[2023-03-18 01:40:04,142] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+[2023-03-18 01:40:05,087] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+[2023-03-18 01:40:05,112] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                               103     0(0.00%)  |      10       2      70       4  |    2.00    0.00
+ POST //api/user/login                                                                 65  65(100.00%)  |   10110       3   60057    1000  |    1.00    1.00
+ GET //api/user/uniqueid                                                               62  62(100.00%)  |   18314       2   60025    7100  |    0.70    0.70
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           230  127(55.22%)  |    7798       2   60057      15  |    3.70    1.70
+
+[2023-03-18 01:40:06,520] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                               104     0(0.00%)  |      10       2      70       4  |    1.80    0.00
+ POST //api/user/login                                                                 69  69(100.00%)  |   11369       3   60057    1100  |    1.00    1.00
+ GET //api/user/uniqueid                                                               63  63(100.00%)  |   18976       2   60025    7100  |    0.60    0.60
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           236  132(55.93%)  |    8394       2   60057      15  |    3.40    1.60
+
+[2023-03-18 01:40:08,307] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                               106     0(0.00%)  |      10       2      70       4  |    1.10    0.00
+ POST //api/user/login                                                                 70  70(100.00%)  |   11250       3   60057    1100  |    1.00    1.00
+ GET //api/user/uniqueid                                                               64  64(100.00%)  |   18679       2   60025    7100  |    0.70    0.70
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           240  134(55.83%)  |    8267       2   60057      15  |    2.80    1.70
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                               107     0(0.00%)  |       9       2      70       4  |    1.00    0.00
+ POST //api/user/login                                                                 74  74(100.00%)  |   12362       3   60057    3000  |    1.10    1.10
+ GET //api/user/uniqueid                                                               64  64(100.00%)  |   18679       2   60025    7100  |    0.80    0.80
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           245  138(56.33%)  |    8618       2   60057      16  |    2.90    1.90
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                               110     0(0.00%)  |       9       2      70       4  |    0.90    0.00
+ POST //api/user/login                                                                 76  76(100.00%)  |   12037       3   60057    1100  |    1.30    1.30
+ GET //api/user/uniqueid                                                               64  64(100.00%)  |   18679       2   60025    7100  |    0.50    0.50
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           250  140(56.00%)  |    8445       2   60057      15  |    2.70    1.80
+
+[2023-03-18 01:40:13,243] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+[2023-03-18 01:40:14,080] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+ Name                                                                              # reqs      # fails  |     Avg     Min     Max  Median  |   req/s failures/s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ GET //                                                                               113     0(0.00%)  |       9       2      70       4  |    0.70    0.00
+ POST //api/user/login                                                                 78  78(100.00%)  |   12693       3   60057    3000  |    1.30    1.30
+ GET //api/user/uniqueid                                                               66  66(100.00%)  |   19023       2   60025    7100  |    0.50    0.50
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregated                                                                           257  144(56.03%)  |    8742       2   60057      15  |    2.50    1.80
+
+[2023-03-18 01:40:16,283] load-97459bd7c-qn2jq/ERROR/locust.user.task: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 290, in run
+    self.execute_next_task()
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 315, in execute_next_task
+    self.execute_task(self._task_queue.pop(0))
+  File "/usr/local/lib/python3.9/site-packages/locust/user/task.py", line 428, in execute_task
+    task(self.user)
+  File "/load/robot-shop.py", line 50, in load
+    user = self.client.get('/api/user/uniqueid', headers={'x-forwarded-for': fake_ip}).json()
+  File "/usr/local/lib/python3.9/site-packages/requests/models.py", line 910, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
